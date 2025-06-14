@@ -2,7 +2,6 @@ package com.example.studentservice.presentation.studentListScreen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,7 +13,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DockedSearchBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FabPosition
@@ -22,7 +20,6 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SearchBar
 import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -60,7 +57,7 @@ fun StudentListScreen(
 				students
 			} else {
 				students.filter { student ->
-					student.name.contains(searchQuery, ignoreCase = true) ?: false
+					student.name.contains(searchQuery, ignoreCase = true)
 				}
 			}
 		}
@@ -86,7 +83,7 @@ fun StudentListScreen(
 				onSearch = { },
 				active = true,
 				onActiveChange = { },
-				placeholder = { Text("Найти статью") },
+				placeholder = { Text("Найти студента") },
 				trailingIcon = { Icon(Icons.Default.Search, null) },
 				colors = SearchBarDefaults.colors(
 					containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
@@ -112,7 +109,7 @@ fun StudentListScreen(
 				modifier = Modifier.fillMaxSize(),
 			) {
 				val onActiveChange = { }
-				val colors1 = SearchBarDefaults.colors(
+				val colors = SearchBarDefaults.colors(
 					containerColor = MaterialTheme.colorScheme.surfaceContainerHigh
 				)
 
