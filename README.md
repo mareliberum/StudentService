@@ -15,8 +15,9 @@ APK можно скачать в релизе https://github.com/mareliberum/Stu
  - "email": "student@gmail.com",
  - "password": "admin",   
 
+
 <div align="center">
    <img src="https://github.com/user-attachments/assets/8a40962e-1414-4557-96ab-b76c463c00eb" width="200"/>
-  <img src="https://github.com/user-attachments/assets/a974690a-55be-41bd-bd4c-77301ee328ed" width="200"/>
+  <img src="https://github.com/user-attachments/assets/ff395491-88b9-4e8c-bf6b-f6916ccf82a2" width="200"/>
   <img src="https://github.com/user-attachments/assets/d6259e23-759b-4dd1-9a43-30d558c77383" width="200"/>
 </div>
