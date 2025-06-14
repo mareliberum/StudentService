@@ -25,6 +25,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -65,6 +66,7 @@ fun StudentListScreen(
 		else -> emptyList()
 	}
 
+	LaunchedEffect(Unit) { viewModel.loadStudents() }
 
 	Scaffold(topBar = {
 		Column {
@@ -127,7 +129,7 @@ fun StudentListScreen(
 					StudentListState.Loading -> {}
 					is StudentListState.Content -> {
 						val content =
-							if (filteredStudents.isEmpty()) students.studentsList
+							if (searchQuery.isEmpty()) students.studentsList
 							else filteredStudents
 						LazyColumn(
 							modifier = Modifier

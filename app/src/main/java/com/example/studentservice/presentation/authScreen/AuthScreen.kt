@@ -61,41 +61,7 @@ fun LoginScreen(
 		)
 
 		Spacer(modifier = Modifier.height(24.dp))
-		// Роль
-		Row {
-			Text(
-				"Войти как:",
-				Modifier.align(Alignment.CenterVertically),
-				color = MaterialTheme.colorScheme.onBackground
-			)
-			Spacer(modifier = Modifier.width(8.dp))
 
-			RadioButton(
-				selected = !uiState.roleIsTeacher,
-				onClick = { viewModel.setRoleToStudent() },
-			)
-			Text(
-				"Студент",
-				Modifier
-					.align(Alignment.CenterVertically)
-					.clickable { viewModel.setRoleToStudent() },
-				color = MaterialTheme.colorScheme.onBackground
-			)
-			Spacer(modifier = Modifier.weight(1f))
-			RadioButton(
-				selected = uiState.roleIsTeacher,
-				onClick = { viewModel.setRoleToTeacher() }
-			)
-			Text(
-				"Преподаватель",
-				Modifier
-					.align(Alignment.CenterVertically)
-					.clickable { viewModel.setRoleToTeacher() },
-				color = MaterialTheme.colorScheme.onBackground
-			)
-		}
-
-		Spacer(modifier = Modifier.height(16.dp))
 		// Почта
 		OutlinedTextField(
 			value = uiState.email,
