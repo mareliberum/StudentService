@@ -5,10 +5,18 @@
 
 APK можно скачать в релизе https://github.com/mareliberum/StudentService/releases/tag/v0.1.0-alpha. Однако, постоянная рабоспособность сервера не гарантируется))
 
+### Авторизация: ###
+
+**Как преподаватель:**
+ - "email": "teacher@gmail.com",
+ - password": "admin",
+
+**Как студент:**
+ - "email": "student@gmail.com",
+ - "password": "admin",   
 
 <div align="center">
    <img src="https://github.com/user-attachments/assets/8a40962e-1414-4557-96ab-b76c463c00eb" width="200"/>
   <img src="https://github.com/user-attachments/assets/a974690a-55be-41bd-bd4c-77301ee328ed" width="200"/>
   <img src="https://github.com/user-attachments/assets/d6259e23-759b-4dd1-9a43-30d558c77383" width="200"/>
-
 </div>
