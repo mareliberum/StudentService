@@ -1,8 +1,8 @@
 plugins {
 	alias(libs.plugins.android.application)
 	alias(libs.plugins.kotlin.android)
-	id("com.google.gms.google-services")
-
+	id("com.google.devtools.ksp")
+	id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -68,6 +68,16 @@ dependencies {
 	debugImplementation(libs.androidx.ui.tooling)
 	debugImplementation(libs.androidx.ui.test.manifest)
 
-	implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
-	implementation("com.google.firebase:firebase-analytics")
+	implementation(libs.androidx.lifecycle.viewmodel.compose)
+	implementation(libs.androidx.navigation.compose)
+
+	implementation(libs.hilt.android)
+	ksp(libs.hilt.android.compiler)
+	implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+
+	implementation("com.squareup.retrofit2:retrofit:2.9.0")
+	implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+	implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+	implementation("androidx.core:core-splashscreen:1.0.0")
+
 }
